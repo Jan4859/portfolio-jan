@@ -73,18 +73,18 @@ const { title, items, icons = {} } = Astro.props;
         accordionHeaders.forEach((header) => {
             header.addEventListener("click", () => {
                 const container = header.closest(".accordion-container");
-                const content = container.querySelector(".accordion-content");
-                const icon = container.querySelector(".accordion-icon");
+                const content = container?.querySelector(".accordion-content");
+                const icon = container?.querySelector(".accordion-icon");
 
                 // Toggle the accordion
-                if (content.classList.contains("active")) {
+                if (content?.classList.contains("active")) {
                     content.classList.remove("active");
                     content.style.maxHeight = "0";
-                    icon.classList.remove("rotate-180");
+                    icon?.classList.remove("rotate-180");
                 } else {
-                    content.classList.add("active");
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    icon.classList.add("rotate-180");
+                    content?.classList.add("active");
+                    content.style.maxHeight = content?.scrollHeight + "px";
+                    icon?.classList.add("rotate-180");
                 }
             });
         });

@@ -63,8 +63,8 @@
     --color-gold-900: #fff7ce;
 
     /* Semantic Color Assignments */
-    --color-bg: #121315;
-    --color-surface: #1A1B1E;
+    --color-bg: #1A1B1E;
+    --color-surface: #121315;
     --color-code-bg: var(--color-yale-blue-300);
     --color-text: #eaeaeabf;
     --color-text-muted: #CFCFCF;
