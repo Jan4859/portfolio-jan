@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/Hero/HeroSection.astro";
+import Accordion from "../components/Body/Accordion.astro";
+import phpSvg from "../assets/php.svg?url";
+import laravelSvg from "../assets/laravel.svg?url";
+import phpUnitSvg from "../assets/phpUnit.svg?url";
+import reactSvg from "../assets/react.svg?url";
+import astroSvg from "../assets/astroIcon.svg?url";
+import typescriptSvg from "../assets/typescript.svg?url";
+import javascriptSvg from "../assets/javascript.svg?url";
+---
+
+<Layout>
+	<HeroSection />
+	<h2 class="text-4xl font-bold text-center">Stack</h2>
+	<div class="flex justify-center p-8 gap-4 w-6/12 mx-auto">
+		<Accordion
+			title="PHP"
+			items={["Laravel", "PHPunit"]}
+			icons={{
+				PHP: phpSvg,
+				Laravel: laravelSvg,
+				PHPunit: phpUnitSvg,
+			}}
+		/>
+		<Accordion
+			title="JavaScript"
+			items={["React", "Astro", "Typescript"]}
+			icons={{
+				JavaScript: javascriptSvg,
+				React: reactSvg,
+				Astro: astroSvg,
+				Typescript: typescriptSvg,
+			}}
+		/>
+	</div>
+</Layout>

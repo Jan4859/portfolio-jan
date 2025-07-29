@@ -1,0 +1,379 @@
+@import "tailwindcss";
+
+:root {
+    /* Custom Color Palette - New Colors */
+    /* Rich Black */
+    --color-rich-black: #000814;
+    --color-rich-black-100: #000204;
+    --color-rich-black-200: #000308;
+    --color-rich-black-300: #00050c;
+    --color-rich-black-400: #000710;
+    --color-rich-black-500: #000814;
+    --color-rich-black-600: #002f76;
+    --color-rich-black-700: #0056d8;
+    --color-rich-black-800: #3b89ff;
+    --color-rich-black-900: #9dc4ff;
+
+    /* Oxford Blue */
+    --color-oxford-blue: #001d3d;
+    --color-oxford-blue-100: #00060c;
+    --color-oxford-blue-200: #000c18;
+    --color-oxford-blue-300: #001225;
+    --color-oxford-blue-400: #001831;
+    --color-oxford-blue-500: #001d3d;
+    --color-oxford-blue-600: #004997;
+    --color-oxford-blue-700: #0074f1;
+    --color-oxford-blue-800: #4ba2ff;
+    --color-oxford-blue-900: #a5d1ff;
+
+    /* Yale Blue */
+    --color-yale-blue: #003566;
+    --color-yale-blue-100: #000b14;
+    --color-yale-blue-200: #001529;
+    --color-yale-blue-300: #00203d;
+    --color-yale-blue-400: #002a52;
+    --color-yale-blue-500: #003566;
+    --color-yale-blue-600: #005fb8;
+    --color-yale-blue-700: #0a89ff;
+    --color-yale-blue-800: #5cb0ff;
+    --color-yale-blue-900: #add8ff;
+
+    /* Mikado Yellow */
+    --color-mikado-yellow: #ffc300;
+    --color-mikado-yellow-100: #332700;
+    --color-mikado-yellow-200: #664e00;
+    --color-mikado-yellow-300: #997500;
+    --color-mikado-yellow-400: #cc9c00;
+    --color-mikado-yellow-500: #ffc300;
+    --color-mikado-yellow-600: #ffcf33;
+    --color-mikado-yellow-700: #ffdb66;
+    --color-mikado-yellow-800: #ffe799;
+    --color-mikado-yellow-900: #fff3cc;
+
+    /* Gold */
+    --color-gold: #ffd60a;
+    --color-gold-100: #352c00;
+    --color-gold-200: #6a5800;
+    --color-gold-300: #9f8500;
+    --color-gold-400: #d4b100;
+    --color-gold-500: #ffd60a;
+    --color-gold-600: #ffde3b;
+    --color-gold-700: #ffe76c;
+    --color-gold-800: #ffef9d;
+    --color-gold-900: #fff7ce;
+
+    /* Semantic Color Assignments */
+    --color-bg: #121315;
+    --color-surface: #1A1B1E;
+    --color-code-bg: var(--color-yale-blue-300);
+    --color-text: #eaeaeabf;
+    --color-text-muted: #CFCFCF;
+    --color-accent: #D4AF37;
+    --color-accent-2: var(--color-gold);
+    --color-border: var(--color-yale-blue-600);
+    --color-hover: var(--color-yale-blue-400);
+    --color-ring: rgba(255, 214, 10, 0.5);
+
+    /* Font families */
+    --font-heading: 'Super Grotesk', sans-serif;
+    --font-body: 'Minion Pro', serif;
+    --font-code: 'JetBrains Mono', monospace;
+}
+
+/* Base font settings */
+html,
+body {
+    font-family: var(--font-body);
+    letter-spacing: 0.055em;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 100;
+    letter-spacing: 0.025em;
+}
+
+code,
+pre {
+    font-family: var(--font-code);
+    background-color: var(--color-code-bg);
+}
+
+/* Utility classes for colors */
+.bg-custom {
+    background-color: var(--color-bg);
+}
+
+.bg-surface {
+    background-color: var(--color-surface);
+}
+
+.bg-code {
+    background-color: var(--color-code-bg);
+}
+
+.bg-hover {
+    background-color: var(--color-hover);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-accent-2 {
+    background-color: var(--color-accent-2);
+}
+
+.text-custom {
+    color: var(--color-text);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-accent-2 {
+    color: var(--color-accent-2);
+}
+
+.border-custom {
+    border-color: var(--color-border);
+}
+
+.ring-custom {
+    box-shadow: 0 0 0 2px var(--color-ring);
+}
+
+/* Font utility classes */
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.font-code {
+    font-family: var(--font-code);
+}
+
+/* Rich Black Utility Classes */
+.bg-rich-black {
+    background-color: var(--color-rich-black);
+}
+
+.bg-rich-black-100 {
+    background-color: var(--color-rich-black-100);
+}
+
+.bg-rich-black-200 {
+    background-color: var(--color-rich-black-200);
+}
+
+.bg-rich-black-300 {
+    background-color: var(--color-rich-black-300);
+}
+
+.bg-rich-black-400 {
+    background-color: var(--color-rich-black-400);
+}
+
+.bg-rich-black-500 {
+    background-color: var(--color-rich-black-500);
+}
+
+.bg-rich-black-600 {
+    background-color: var(--color-rich-black-600);
+}
+
+.bg-rich-black-700 {
+    background-color: var(--color-rich-black-700);
+}
+
+.bg-rich-black-800 {
+    background-color: var(--color-rich-black-800);
+}
+
+.bg-rich-black-900 {
+    background-color: var(--color-rich-black-900);
+}
+
+/* Oxford Blue Utility Classes */
+.bg-oxford-blue {
+    background-color: var(--color-oxford-blue);
+}
+
+.bg-oxford-blue-100 {
+    background-color: var(--color-oxford-blue-100);
+}
+
+.bg-oxford-blue-200 {
+    background-color: var(--color-oxford-blue-200);
+}
+
+.bg-oxford-blue-300 {
+    background-color: var(--color-oxford-blue-300);
+}
+
+.bg-oxford-blue-400 {
+    background-color: var(--color-oxford-blue-400);
+}
+
+.bg-oxford-blue-500 {
+    background-color: var(--color-oxford-blue-500);
+}
+
+.bg-oxford-blue-600 {
+    background-color: var(--color-oxford-blue-600);
+}
+
+.bg-oxford-blue-700 {
+    background-color: var(--color-oxford-blue-700);
+}
+
+.bg-oxford-blue-800 {
+    background-color: var(--color-oxford-blue-800);
+}
+
+.bg-oxford-blue-900 {
+    background-color: var(--color-oxford-blue-900);
+}
+
+/* Yale Blue Utility Classes */
+.bg-yale-blue {
+    background-color: var(--color-yale-blue);
+}
+
+.bg-yale-blue-100 {
+    background-color: var(--color-yale-blue-100);
+}
+
+.bg-yale-blue-200 {
+    background-color: var(--color-yale-blue-200);
+}
+
+.bg-yale-blue-300 {
+    background-color: var(--color-yale-blue-300);
+}
+
+.bg-yale-blue-400 {
+    background-color: var(--color-yale-blue-400);
+}
+
+.bg-yale-blue-500 {
+    background-color: var(--color-yale-blue-500);
+}
+
+.bg-yale-blue-600 {
+    background-color: var(--color-yale-blue-600);
+}
+
+.bg-yale-blue-700 {
+    background-color: var(--color-yale-blue-700);
+}
+
+.bg-yale-blue-800 {
+    background-color: var(--color-yale-blue-800);
+}
+
+.bg-yale-blue-900 {
+    background-color: var(--color-yale-blue-900);
+}
+
+/* Mikado Yellow Utility Classes */
+.bg-mikado-yellow {
+    background-color: var(--color-mikado-yellow);
+}
+
+.bg-mikado-yellow-100 {
+    background-color: var(--color-mikado-yellow-100);
+}
+
+.bg-mikado-yellow-200 {
+    background-color: var(--color-mikado-yellow-200);
+}
+
+.bg-mikado-yellow-300 {
+    background-color: var(--color-mikado-yellow-300);
+}
+
+.bg-mikado-yellow-400 {
+    background-color: var(--color-mikado-yellow-400);
+}
+
+.bg-mikado-yellow-500 {
+    background-color: var(--color-mikado-yellow-500);
+}
+
+.bg-mikado-yellow-600 {
+    background-color: var(--color-mikado-yellow-600);
+}
+
+.bg-mikado-yellow-700 {
+    background-color: var(--color-mikado-yellow-700);
+}
+
+.bg-mikado-yellow-800 {
+    background-color: var(--color-mikado-yellow-800);
+}
+
+.bg-mikado-yellow-900 {
+    background-color: var(--color-mikado-yellow-900);
+}
+
+/* Gold Utility Classes */
+.bg-gold {
+    background-color: var(--color-gold);
+}
+
+.bg-gold-100 {
+    background-color: var(--color-gold-100);
+}
+
+.bg-gold-200 {
+    background-color: var(--color-gold-200);
+}
+
+.bg-gold-300 {
+    background-color: var(--color-gold-300);
+}
+
+.bg-gold-400 {
+    background-color: var(--color-gold-400);
+}
+
+.bg-gold-500 {
+    background-color: var(--color-gold-500);
+}
+
+.bg-gold-600 {
+    background-color: var(--color-gold-600);
+}
+
+.bg-gold-700 {
+    background-color: var(--color-gold-700);
+}
+
+.bg-gold-800 {
+    background-color: var(--color-gold-800);
+}
+
+.bg-gold-900 {
+    background-color: var(--color-gold-900);
+}
+
+.border-accent {
+    border-color: var(--color-accent);
+}

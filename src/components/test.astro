@@ -1,0 +1,304 @@
+---
+// Test component to showcase all custom colors
+---
+
+<div class="p-8 bg-custom min-h-screen">
+    <h1 class="text-4xl font-bold text-custom mb-8 font-heading">Color Palette Exhibition</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Background Colors -->
+        <div class="space-y-6">
+            <h2 class="text-2xl text-accent mb-4">Background Colors</h2>
+
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <div class="w-24 h-24 bg-rich-black border border-custom"></div>
+                    <div class="ml-4">
+                        <p class="text-custom">bg (Rich Black)</p>
+                        <p class="text-muted">#000814</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="w-24 h-24 bg-oxford-blue border border-custom">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-custom">surface (Oxford Blue)</p>
+                        <p class="text-muted">#001d3d</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="w-24 h-24 bg-yale-blue-300 border border-custom">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-custom">code-bg (Yale Blue 300)</p>
+                        <p class="text-muted">#00203d</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="w-24 h-24 bg-yale-blue-400 border border-custom"></div>
+                    <div class="ml-4">
+                        <p class="text-custom">hover (Yale Blue 400)</p>
+                        <p class="text-muted">#002a52</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text and Accent Colors -->
+        <div class="space-y-6">
+            <h2 class="text-2xl text-accent mb-4">Text & Accent Colors</h2>
+
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <div
+                        class="w-24 h-24 bg-surface flex items-center justify-center"
+                    >
+                        <span class="text-custom text-2xl">Aa</span>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-custom">text</p>
+                        <p class="text-muted">#FFFFFF</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div
+                        class="w-24 h-24 bg-surface flex items-center justify-center"
+                    >
+                        <span class="text-muted text-2xl">Aa</span>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-custom">text-muted (Yale Blue 900)</p>
+                        <p class="text-muted">#add8ff</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div
+                        class="w-24 h-24 bg-surface flex items-center justify-center"
+                    >
+                        <span class="text-accent text-2xl">Aa</span>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-custom">accent (Mikado Yellow)</p>
+                        <p class="text-muted">#ffc300</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div
+                        class="w-24 h-24 bg-surface flex items-center justify-center"
+                    >
+                        <span class="text-accent-2 text-2xl">Aa</span>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-custom">accent-2 (Gold)</p>
+                        <p class="text-muted">#ffd60a</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Color Shades Section -->
+    <div class="mt-12">
+        <h2 class="text-2xl text-accent mb-6 font-heading">Color Shades</h2>
+        
+        <!-- Rich Black Shades -->
+        <div class="mb-8">
+            <h3 class="text-xl text-custom mb-4">Rich Black Shades</h3>
+            <div class="grid grid-cols-5 md:grid-cols-10 gap-2">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-100 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">100</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-200 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">200</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-300 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">300</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-400 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">400</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-500 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">500</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-600 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">600</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-700 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">700</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-800 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">800</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-rich-black-900 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">900</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Yale Blue Shades -->
+        <div class="mb-8">
+            <h3 class="text-xl text-custom mb-4">Yale Blue Shades</h3>
+            <div class="grid grid-cols-5 md:grid-cols-10 gap-2">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-100 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">100</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-200 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">200</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-300 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">300</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-400 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">400</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-500 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">500</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-600 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">600</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-700 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">700</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-800 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">800</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yale-blue-900 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">900</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gold Shades -->
+        <div class="mb-8">
+            <h3 class="text-xl text-custom mb-4">Gold Shades</h3>
+            <div class="grid grid-cols-5 md:grid-cols-10 gap-2">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-gold-100 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">100</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-gold-300 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">300</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-gold-500 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">500</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-gold-700 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">700</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-gold-900 border border-custom rounded"></div>
+                    <p class="text-xs text-muted mt-1">900</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI Elements Section -->
+    <div class="mt-12">
+        <h2 class="text-2xl text-accent mb-6 font-heading">UI Elements</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Borders -->
+            <div class="space-y-4">
+                <h3 class="text-xl text-custom mb-2">Borders</h3>
+                <div class="p-6 bg-surface border border-custom">
+                    <p class="text-custom">Border: Yale Blue 600</p>
+                </div>
+            </div>
+
+            <!-- Ring -->
+            <div class="space-y-4">
+                <h3 class="text-xl text-custom mb-2">Focus Ring</h3>
+                <button
+                    class="px-4 py-2 bg-surface text-custom border border-custom focus:outline-none focus:ring-2 ring-custom"
+                >
+                    Focus on me (Tab key)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Elements -->
+    <div class="mt-12 space-y-6">
+        <h2 class="text-2xl text-accent mb-6 font-heading">Interactive Elements</h2>
+
+        <div class="space-y-4">
+            <div class="flex flex-wrap gap-4">
+                <button
+                    class="px-6 py-3 bg-accent text-custom font-medium rounded hover:bg-accent-2 transition-colors"
+                >
+                    Primary Button
+                </button>
+
+                <button
+                    class="px-6 py-3 bg-surface text-custom border border-custom rounded hover:bg-hover transition-colors"
+                >
+                    Secondary Button
+                </button>
+
+                <div
+                    class="px-6 py-3 bg-code text-custom font-code rounded border border-custom"
+                >
+                    <code>Code Block</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Showcase -->
+    <div class="mt-12 p-6 bg-surface border border-custom rounded-lg">
+        <h2 class="text-2xl text-accent mb-6 font-heading">Typography</h2>
+        
+        <div class="space-y-8">
+            <div>
+                <h3 class="text-xl text-custom mb-4">Outfit (Headings)</h3>
+                <div class="space-y-2">
+                    <h1 class="text-4xl font-heading">Heading 1</h1>
+                    <h2 class="text-3xl font-heading">Heading 2</h2>
+                    <h3 class="text-2xl font-heading">Heading 3</h3>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl text-custom mb-4">Inter (Body/UI)</h3>
+                <p class="font-body">This is body text using Inter, a highly legible and elegant sans-serif font that works well in user interfaces.</p>
+                <p class="font-body text-muted mt-2">This is muted body text for secondary information.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-xl text-custom mb-4">JetBrains Mono (Code)</h3>
+                <div class="bg-code p-4 rounded">
+                    <code class="font-code">function example() {<br&nbsp;return "This is JetBrains Mono";<br>}</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

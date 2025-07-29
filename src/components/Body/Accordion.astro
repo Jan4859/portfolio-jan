@@ -1,0 +1,92 @@
+---
+interface Props {
+    title: string;
+    items: string[];
+    icons?: Record<string, string>;
+}
+
+const { title, items, icons = {} } = Astro.props;
+---
+
+<div class="w-full mb-4">
+    <div
+        class="accordion-container border border-border px-8 py-2 rounded-lg overflow-hidden bg-surface"
+    >
+        <button
+            class="accordion-header w-full p-4 flex justify-between items-center text-left font-medium focus:outline-none"
+        >
+            <div class="flex items-center gap-2">
+                {
+                    icons[title] && (
+                        <img
+                            src={icons[title]}
+                            alt={`${title} icon`}
+                            class="w-8 h-8 mb-1"
+                        />
+                    )
+                }
+                <span>{title}</span>
+            </div>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="accordion-icon h-5 w-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div
+            class="accordion-content max-h-0 overflow-hidden transition-all duration-300"
+        >
+            <div class="p-4 border-t border-border">
+                <ul class="space-y-2">
+                    {
+                        items.map((item) => (
+                            <li class="text-text-muted flex items-center gap-2">
+                                {icons[item] && (
+                                    <img
+                                        src={icons[item]}
+                                        alt={`${item} icon`}
+                                        class="w-7 h-7 mb-1"
+                                    />
+                                )}
+                                {item}
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+        accordionHeaders.forEach((header) => {
+            header.addEventListener("click", () => {
+                const container = header.closest(".accordion-container");
+                const content = container.querySelector(".accordion-content");
+                const icon = container.querySelector(".accordion-icon");
+
+                // Toggle the accordion
+                if (content.classList.contains("active")) {
+                    content.classList.remove("active");
+                    content.style.maxHeight = "0";
+                    icon.classList.remove("rotate-180");
+                } else {
+                    content.classList.add("active");
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.classList.add("rotate-180");
+                }
+            });
+        });
+    });
+</script>
