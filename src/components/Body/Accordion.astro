@@ -1,4 +1,6 @@
 ---
+import Image from "astro/components/Image.astro";
+
 interface Props {
     title: string;
     items: string[];
@@ -18,10 +20,12 @@ const { title, items, icons = {} } = Astro.props;
             <div class="flex items-center gap-2">
                 {
                     icons[title] && (
-                        <img
+                        <Image
+                            inferSize={true}
                             src={icons[title]}
                             alt={`${title} icon`}
-                            class="w-8 h-8 mb-1"
+                            width={24}
+                            height={24}
                         />
                     )
                 }

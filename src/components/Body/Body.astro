@@ -1,0 +1,91 @@
+---
+import Accordion from "./Accordion.astro";
+import Project from "./Project.astro";
+import phpSvg from "../../assets/php.svg?url";
+import laravelSvg from "../../assets/laravel.svg?url";
+import phpUnitSvg from "../../assets/phpUnit.svg?url";
+import reactSvg from "../../assets/react.svg?url";
+import astroSvg from "../../assets/astroIcon.svg?url";
+import typescriptSvg from "../../assets/typescript.svg?url";
+import javascriptSvg from "../../assets/javascript.svg?url";
+import About from "./About.astro";
+interface Props {
+    projects: any[];
+}
+const { projects } = Astro.props;
+---
+
+<>
+    <h2 class="text-4xl font-bold text-center">Stack</h2>
+    <div
+        class="flex flex-col md:flex-row justify-center p-8 gap-4 w-full mx-auto"
+    >
+        <Accordion
+            title="PHP"
+            items={["Laravel", "PHPunit"]}
+            icons={{
+                PHP: phpSvg,
+                Laravel: laravelSvg,
+                PHPunit: phpUnitSvg,
+            }}
+        />
+        <Accordion
+            title="JavaScript"
+            items={["React", "Astro", "Typescript"]}
+            icons={{
+                JavaScript: javascriptSvg,
+                React: reactSvg,
+                Astro: astroSvg,
+                Typescript: typescriptSvg,
+            }}
+        />
+    </div>
+    <h2 class="text-4xl font-bold text-center">Projects</h2>
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8  place-items-center justify-items-center "
+        >
+            {
+                projects.slice(0, 3).map((project) => (
+                    <>
+                        <Project
+                            title={project.title}
+                            img={project.img}
+                            description={project.description}
+                            languages={project.languages}
+                            links={project.links}
+                        />
+                    </>
+                ))
+            }
+        </div>
+
+        {
+            projects.length > 3 && (
+                <div class="flex justify-center mt-8">
+                    <a
+                        href="/projects"
+                        class="inline-flex items-center px-6 py-3  border border-border rounded-lg shadow-md hover:bg-hover transition-colors duration-300 text-text"
+                    >
+                        View More Projects
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 ml-2"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            )
+        }
+        <div class="mt-8">
+            <About />
+        </div>
+    </div>
+</>
