@@ -377,3 +377,11 @@ pre {
 .border-accent {
     border-color: var(--color-accent);
 }
+
+/* Hover variants */
+.hover\:bg-accent-2:hover {
+    background-color: var(--color-accent-2);
+}
+.hover\:text-accent-2:hover {
+    color: var(--color-accent-2);
+}

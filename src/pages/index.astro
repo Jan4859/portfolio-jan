@@ -2,9 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/Hero/HeroSection.astro";
 import githubSvg from "../assets/github.png";
+import linkedinSvg from "../assets/linkedin.svg";
+import mail from "../assets/mail.png";
+import eye from "../assets/eye.png";
 import website from "../assets/web.png";
 import Body from "../components/Body/Body.astro";
 import swaipy from "../assets/imgs/swaipy.jpeg";
+import Footer from "../components/Footer/Footer.astro";
 
 const projects = [
 	{
@@ -15,9 +19,9 @@ const projects = [
 		languages: ["PHP", "Laravel", "Astro", "React", "TypeScript"],
 		links: [
 			{
-				name: "Github",
-				url: "https://github.com/username/project1",
-				icon: githubSvg,
+				name: "View",
+				url: "https://jan4859.com/what-is-swaipy",
+				icon: eye,
 			},
 		],
 	},
@@ -43,6 +47,7 @@ const projects = [
 ---
 
 <Layout>
-	<HeroSection />
+	<HeroSection linkedinSvg={linkedinSvg} mail={mail} />
 	<Body projects={projects} />
+	<Footer />
 </Layout>

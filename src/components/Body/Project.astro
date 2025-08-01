@@ -12,7 +12,7 @@ const { title, img, description, languages, links } = Astro.props;
 ---
 
 <div
-    class="flex flex-col items-center bg-surface p-4 rounded-xl shadow-xl border lg:w-[450px] w-[350px] md:w-[400px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+    class=" flex flex-col items-center bg-surface p-4 rounded-xl shadow-xl border lg:w-[450px] w-[350px] md:w-[400px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
 >
     <h2 class="text-2xl font-bold border-b-2 border-accent w-full p-2">
         {title}
@@ -39,10 +39,10 @@ const { title, img, description, languages, links } = Astro.props;
             ))
         }
     </div>
-    <div class="flex gap-2 mt-2">
+    <div class="flex gap-2 mt-2 ">
         {
             links.map((link) => (
-                <a href={link.url} class="flex items-center gap-2 p-2 border  text-xl  bg-accent rounded text-black cursor-pointer">
+                <a href={link.url} class="flex items-center gap-2 p-2 border  text-xl  bg-accent rounded text-black cursor-pointer hover:bg-accent-2 ">
                    <Image src={link.icon} alt="test" inferSize={true} width={24} height={24} /> <span>{link.name}</span>
                 </a>
             ))
