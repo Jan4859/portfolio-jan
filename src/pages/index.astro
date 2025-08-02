@@ -10,6 +10,16 @@ import Body from "../components/Body/Body.astro";
 import swaipy from "../assets/imgs/swaipy.jpeg";
 import Footer from "../components/Footer/Footer.astro";
 
+// Language icons
+import phpSvg from "../assets/php.png";
+import laravelSvg from "../assets/laravel.svg?url";
+import reactSvg from "../assets/react.svg?url";
+import astroSvg from "../assets/astroIcon.svg?url";
+import typescriptSvg from "../assets/typescript.svg?url";
+import tailwindSvg from "../assets/tailwind-css.svg?url";
+import npmSvg from "../assets/npm.svg?url";
+import storybookSvg from "../assets/storybook.svg?url";
+
 const projects = [
 	{
 		title: "SWAIPY",
@@ -17,10 +27,17 @@ const projects = [
 		description:
 			"A set of AI tools(SaaS) to convert multimedia content (SCORM, video, audio) into accessible formats for people with different disabilities.",
 		languages: ["PHP", "Laravel", "Astro", "React", "TypeScript"],
+		languageIcons: {
+			PHP: phpSvg,
+			Laravel: laravelSvg,
+			Astro: astroSvg,
+			React: reactSvg,
+			TypeScript: typescriptSvg,
+		},
 		links: [
 			{
-				name: "View",
-				url: "https://jan4859.com/what-is-swaipy",
+				name: "Coming soon",
+				url: "",
 				icon: eye,
 			},
 		],
@@ -30,15 +47,22 @@ const projects = [
 		img: "https://placehold.co/600x400",
 		description: "XUI2 is a design library for React.",
 		languages: ["React", "TypeScript", "NPM", "Tailwind", "Storybook"],
+		languageIcons: {
+			React: reactSvg,
+			TypeScript: typescriptSvg,
+			NPM: npmSvg,
+			Tailwind: tailwindSvg,
+			Storybook: storybookSvg,
+		},
 		links: [
 			{
-				name: "Github",
-				url: "https://github.com/username/project2",
+				name: "Coming soon",
+				url: "",
 				icon: githubSvg,
 			},
 			{
-				name: "Website",
-				url: "https://github.com/username/project2",
+				name: "Coming soon",
+				url: "",
 				icon: website,
 			},
 		],

@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import menuSvg from "../../assets/menu.svg";
+import closeSvg from "../../assets/close.svg";
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface md:hidden">
+    <div class="w-full text-xl">
+        <div class="flex justify-between items-center p-4 px-6 border-b border-accent">
+            <span class="font-heading text-accent">Juan Diaz</span>
+            <button id="menu-toggle" class="text-text-muted" aria-label="Toggle menu">
+                 <Image src={menuSvg} alt="Menu" width={24} height={24} />
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-bg/95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out bg-surface">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-4 px-6 border-b border-accent">
+                <span class="font-heading text-accent">Juan Diaz</span>
+                <button id="close-menu" class="text-text-muted" aria-label="Close menu">
+                    <Image src={closeSvg} alt="Menu" width={24} height={24} />
+                </button>
+            </div>
+            <nav class="flex flex-col items-center justify-center flex-grow gap-8 text-xl text-text-muted">
+                <a href="#home" class="hover:text-text transition-colors duration-200">Home</a>
+                <a href="#stack" class="hover:text-text transition-colors duration-200">Stack</a>
+                <a href="#projects" class="hover:text-text transition-colors duration-200">Projects</a>
+                <a href="#about" class="hover:text-text transition-colors duration-200">About Me</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && closeMenu && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        }
+    });
+</script>

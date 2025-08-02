@@ -5,10 +5,11 @@ interface Props {
     img: string;
     description: string;
     languages: string[];
+    languageIcons?: Record<string, string>;
     links: { name: string; url: string; icon: string }[];
 }
 
-const { title, img, description, languages, links } = Astro.props;
+const { title, img, description, languages, languageIcons = {}, links } = Astro.props;
 ---
 
 <div
@@ -27,13 +28,22 @@ const { title, img, description, languages, links } = Astro.props;
             class="w-full h-auto object-cover"
         />
     </div>
-    <div class="h-24 lg:h-10 w-full text-center">
+    <div class="h-24 lg:h-14 w-full text-center">
         <p>{description}</p>
     </div>
     <div class="flex justify-center items-end gap-2 p-2 flex-wrap w-full h-32 ">
         {
             languages.map((language) => (
-                <span class="p-2 border border-accent h-10 rounded-xl font-bold ">
+                <span class="flex items-center gap-1.5 text-text-muted px-3 py-1.5 rounded-full text-sm font-medium shadow-sm bg-[#1e1e20] ">
+                    {languageIcons[language] && (
+                        <Image
+                            src={languageIcons[language]}
+                            alt={`${language} icon`}
+                            width={24}
+                            height={24}
+                            class="w-5 h-5"
+                        />
+                    )}
                     {language}
                 </span>
             ))
@@ -43,7 +53,7 @@ const { title, img, description, languages, links } = Astro.props;
         {
             links.map((link) => (
                 <a href={link.url} class="flex items-center gap-2 p-2 border  text-xl  bg-accent rounded text-black cursor-pointer hover:bg-accent-2 ">
-                   <Image src={link.icon} alt="test" inferSize={true} width={24} height={24} /> <span>{link.name}</span>
+                   <Image src={link.icon} alt={link.name} width={24} height={24} /> <span>{link.name}</span>
                 </a>
             ))
         }

@@ -1,0 +1,55 @@
+---
+import Experience from "./Experience.astro";
+import { Image } from "astro:assets";
+
+// Import images
+import ximdexLogo from "../../assets/imgs/ximdex.png";
+import cargestionLogo from "../../assets/imgs/cargestion.webp";
+
+// Define experience data
+const experienceData = [
+    {
+        title: "Full Stack Developer",
+        imageSrc: ximdexLogo,
+        imageAlt: "Ximdex Logo",
+        company: "Ximdex",
+        period: "2023 - 2025",
+        description: [
+            "I led the delivery of high-performance platforms for the education sector, including APIs, SaaS tools, and CDN services.",
+            "I spearheaded a migration from PHP to Rust for core processes, reducing latency by 90% and optimizing server usage.",
+            "I also modernized legacy codebases, improved team workflows with Jira and GitHub standards, and supported onboarding and mentoring of junior developers.",
+        ],
+    },
+    {
+        title: "Backend Developer",
+        imageSrc: cargestionLogo,
+        imageAlt: "Cargestion Logo",
+        company: "Cargestion",
+        period: "2021 - 2022",
+        description: [
+            "I contributed to the development and maintenance of a large-scale B2B SaaS and API platform used by 140+ car rental agencies across Europe.",
+            "I helped deliver scalable fleet and booking solutions, improved code quality through refactoring, and supported clients directly—reducing onboarding time and cutting support tickets by 80%.",
+            "I also collaborated closely with the product and DevOps teams to ensure performance and stability.",
+        ],
+    },
+];
+---
+
+<section id="experience" class="pt-16">
+    <h2 class="text-4xl font-bold text-center mb-10">Experience</h2>
+
+    <div class="space-y-8">
+        {
+            experienceData.map((exp) => (
+                <Experience
+                    title={exp.title}
+                    imageSrc={exp.imageSrc}
+                    imageAlt={exp.imageAlt}
+                    company={exp.company}
+                    period={exp.period}
+                    description={exp.description}
+                />
+            ))
+        }
+    </div>
+</section>
