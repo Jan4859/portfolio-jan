@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/Hero/HeroSection.astro";
-import githubSvg from "../assets/github.png";
 import linkedinSvg from "../assets/linkedin.svg";
 import mail from "../assets/mail.png";
 import eye from "../assets/eye.png";
 import website from "../assets/web.png";
 import Body from "../components/Body/Body.astro";
 import swaipy from "../assets/imgs/swaipy.jpeg";
+import xui2 from "../assets/imgs/XUIv2.png";
 import Footer from "../components/Footer/Footer.astro";
 
 // Language icons
@@ -19,6 +19,7 @@ import typescriptSvg from "../assets/typescript.svg?url";
 import tailwindSvg from "../assets/tailwind-css.svg?url";
 import npmSvg from "../assets/npm.svg?url";
 import storybookSvg from "../assets/storybook.svg?url";
+import npmBlackSvg from "../assets/npmblack.svg?url";
 
 const projects = [
 	{
@@ -36,7 +37,7 @@ const projects = [
 		},
 		links: [
 			{
-				name: "Coming soon",
+				name: "Coming Soon",
 				url: "",
 				icon: eye,
 			},
@@ -44,8 +45,8 @@ const projects = [
 	},
 	{
 		title: "XUI2",
-		img: "https://placehold.co/600x400",
-		description: "XUI2 is a design library for React.",
+		img: xui2,
+		description:"XUI2 is a React component library that provides a set of reusable, accessible, and customizable components to build modern web applications.",
 		languages: ["React", "TypeScript", "NPM", "Tailwind", "Storybook"],
 		languageIcons: {
 			React: reactSvg,
@@ -56,12 +57,12 @@ const projects = [
 		},
 		links: [
 			{
-				name: "Coming soon",
-				url: "",
-				icon: githubSvg,
+				name: "Repository",
+				url: "https://www.npmjs.com/package/@ximdex/xui-react",
+				icon: npmBlackSvg,
 			},
 			{
-				name: "Coming soon",
+				name: "Coming Soon",
 				url: "",
 				icon: website,
 			},
