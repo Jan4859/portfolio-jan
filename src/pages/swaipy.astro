@@ -1,6 +1,217 @@
 ---
 import Layout from "../layouts/LayoutSecondary.astro";
----       
+import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
+
+// Import all Swaipy images
+import main from "../assets/imgs/swaipy/main.png";
+import adaptation from "../assets/imgs/swaipy/adaptation.png";
+import adaptationList from "../assets/imgs/swaipy/adaptationList.png";
+import availableAdaptations from "../assets/imgs/swaipy/availableAdaptations.png";
+import editsequence from "../assets/imgs/swaipy/editsequence.png";
+import scormoriginal from "../assets/imgs/swaipy/scormoriginal.png";
+import scormpolish from "../assets/imgs/swaipy/scormpolish.png";
+import upload from "../assets/imgs/swaipy/upload.png";
+
+// Process images with high quality settings
+const processedOriginal = await getImage({
+    src: scormoriginal,
+    format: "png",
+    quality: 100,
+});
+
+const processedPolish = await getImage({
+    src: scormpolish,
+    format: "png",
+    quality: 100,
+});
+---
+
 <Layout>
-    <h1>SWAIPY</h1>
+    <section class="w-full max-w-7xl mx-auto mt-8 bg-surface p-8">
+        <h1 class="text-4xl font-bold text-center text-accent">SWAIPY</h1>
+        <h3 class="text-2xl font-bold text-center text-accent mt-8">
+            What's Swaipy?
+        </h3>
+        <p class="text-center w-6/12 mx-auto">
+            Swaipy is a web application that allows users to adapt educational
+            conttent(Scorm, text, websites, digital books, etc.) to any
+            disability, with high customization for every problem.
+        </p>
+        <h3 class="text-2xl font-bold text-center text-accent mt-8">
+            How it works?
+        </h3>
+        <p class="text-center w-6/12 mx-auto">
+            Swaipy uses AI to analyze the content and create a personalized plan
+            for each user(Or group) adapting the content to different
+            disabilites, like dyslexia, ADHD, etc.
+        </p>
+
+        <h2 class="text-2xl font-bold text-center mt-8 text-accent mb-8">
+            Swaipy Features & Functionality
+        </h2>
+
+        <div class="space-y-12">
+            <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                    <Image
+                        src={upload}
+                        alt="Upload interface"
+                        width={600}
+                        height={400}
+                        class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold mb-2 text-accent">
+                        Content Upload
+                    </h3>
+                    <p class="text-muted">
+                        Upload <span class="text-accent font-medium">SCORM packages, PDFs, websites, or text files</span>.
+                        Drag and drop or browse to select. Swaipy detects file
+                        types automatically and <span class="text-accent font-medium">prepares them for adaptation</span>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                    <Image
+                        src={availableAdaptations}
+                        alt="Available adaptations"
+                        width={600}
+                        height={400}
+                        class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold mb-2 text-accent">
+                        Available adaptations
+                    </h3>
+                    <p class="text-muted">
+                        See all the information about the adaptations, from
+                        <span class="text-accent font-medium">languages to any disability</span>, users can create their own
+                        <span class="text-accent font-medium">adaptations sequences</span>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                    <Image
+                        src={adaptation}
+                        alt="Adaptation interface"
+                        width={600}
+                        height={400}
+                        class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold mb-2 text-accent">
+                        Adaptation Dashboard
+                    </h3>
+                    <p class="text-muted">
+                        See all the information about the adaptation, like the
+                        <span class="text-accent font-medium">name, type, users</span>, etc. Also you can <span class="text-accent font-medium">edit the
+                        adaptation, add users</span>, etc.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                    <Image
+                        src={adaptationList}
+                        alt="List of adaptations"
+                        width={600}
+                        height={400}
+                        class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold mb-2 text-accent">
+                        Adaptation Management
+                    </h3>
+                    <p class="text-muted">
+                        View <span class="text-accent font-medium">all your adaptations in one place</span>. See the
+                        associated resources, <span class="text-accent font-medium">number of users, sequences</span>, and
+                        more.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                    <Image
+                        src={editsequence}
+                        alt="Edit sequence interface"
+                        width={600}
+                        height={400}
+                        class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold mb-2 text-accent">
+                        Content Sequencing
+                    </h3>
+                    <p class="text-muted">
+                        <span class="text-accent font-medium">Customize learning paths</span> by rearranging sections and
+                        creating alternative routes. Create <span class="text-accent font-medium">personalized content
+                        flow</span> for optimal learning and accessibility for every
+                        user.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 items-center">
+                <h3 class="text-xl font-bold mb-2 text-accent">
+                    Original Content View
+                </h3>
+                <div class="w-full">
+                    <img
+                        src={processedOriginal.src}
+                        alt="Original SCORM content"
+                        class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
+                    />
+                </div>
+                <div class="w-full md:w-3/4 text-center">
+                    <p class="text-muted">
+                        View <span class="text-accent font-medium">original content</span> before adaptation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 items-center">
+                <h3 class="text-xl font-bold mb-2 text-accent">
+                    Adapted Content Preview
+                </h3>
+                <div class="w-full">
+                    <img
+                        src={processedPolish.src}
+                        alt="Polished SCORM content"
+                        class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
+                    />
+                </div>
+                <div class="w-full md:w-3/4 text-center">
+                    <p class="text-muted">
+                        Preview <span class="text-accent font-medium">adapted content</span> as it will appear to users. In
+                        this case from <span class="text-accent font-medium">English to Polish</span>.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center border-t border-accent pt-8">
+                <h2 class="text-2xl font-bold text-accent mb-4">Swaipy Will Be Available Soon</h2>
+                <p class="text-muted w-6/12 mx-auto">
+                    This project is currently in development. The platform aims to 
+                    <span class="text-accent font-medium">transform educational content</span> for accessibility needs.
+                </p>
+                <div class="mt-6">
+                    <span class="inline-block px-4 py-2 bg-accent/10 text-accent border border-accent rounded-md">
+                        In Development
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>
