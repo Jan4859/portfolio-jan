@@ -22,57 +22,58 @@ import storybookSvg from "../assets/storybook.svg?url";
 import npmBlackSvg from "../assets/npmblack.svg?url";
 
 const projects = [
-	{
-		title: "SWAIPY",
-		img: swaipy,
-		description:
-			"A set of AI tools(SaaS) to convert multimedia content (SCORM, video, audio) into accessible formats for people with different disabilities.",
-		languages: ["PHP", "Laravel", "Astro", "React", "TypeScript"],
-		languageIcons: {
-			PHP: phpSvg,
-			Laravel: laravelSvg,
-			Astro: astroSvg,
-			React: reactSvg,
-			TypeScript: typescriptSvg,
-		},
-		links: [
-			{
-				name: "Coming Soon",
-				url: "",
-				icon: eye,
-			},
-		],
-	},
-	{
-		title: "XUI2",
-		img: xui2,
-		description:"XUI2 is a React component library that provides a set of reusable, accessible, and customizable components to build modern web applications.",
-		languages: ["React", "TypeScript", "NPM", "Tailwind", "Storybook"],
-		languageIcons: {
-			React: reactSvg,
-			TypeScript: typescriptSvg,
-			NPM: npmSvg,
-			Tailwind: tailwindSvg,
-			Storybook: storybookSvg,
-		},
-		links: [
-			{
-				name: "Repository",
-				url: "https://www.npmjs.com/package/@ximdex/xui-react",
-				icon: npmBlackSvg,
-			},
-			{
-				name: "Coming Soon",
-				url: "",
-				icon: website,
-			},
-		],
-	},
+  {
+    title: "SWAIPY",
+    img: swaipy,
+    description:
+      "A set of AI tools(SaaS) to convert multimedia content (SCORM, video, audio) into accessible formats for people with different disabilities.",
+    languages: ["PHP", "Laravel", "Astro", "React", "TypeScript"],
+    languageIcons: {
+      PHP: phpSvg,
+      Laravel: laravelSvg,
+      Astro: astroSvg,
+      React: reactSvg,
+      TypeScript: typescriptSvg,
+    },
+    links: [
+      {
+        name: "Preview",
+        url: "/swaipy",
+        icon: eye,
+      },
+    ],
+  },
+  {
+    title: "XUI2",
+    img: xui2,
+    description:
+      "XUI2 is a React component library that provides a set of reusable, accessible, and customizable components to build modern web applications.",
+    languages: ["React", "TypeScript", "NPM", "Tailwind", "Storybook"],
+    languageIcons: {
+      React: reactSvg,
+      TypeScript: typescriptSvg,
+      NPM: npmSvg,
+      Tailwind: tailwindSvg,
+      Storybook: storybookSvg,
+    },
+    links: [
+      {
+        name: "Repository",
+        url: "https://www.npmjs.com/package/@ximdex/xui-react",
+        icon: npmBlackSvg,
+      },
+      {
+        name: "Coming Soon",
+        url: "",
+        icon: website,
+      },
+    ],
+  },
 ];
 ---
 
 <Layout>
-	<HeroSection linkedinSvg={linkedinSvg} mail={mail} />
-	<Body projects={projects} />
-	<Footer />
+  <HeroSection linkedinSvg={linkedinSvg} mail={mail} />
+  <Body projects={projects} />
+  <Footer />
 </Layout>
